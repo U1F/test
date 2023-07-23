@@ -19,15 +19,18 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
  * @return void
  */
 function my_plugin_enqueue_scripts() {
+	wp_enqueue_script( 'wp-element' );
+	$asset_file = include plugin_dir_path( __FILE__ ) . 'build/hello.asset.php';
 	wp_enqueue_script(
-		'test-plugin-main-js',
-		plugin_dir_url( __FILE__ ) . 'dist/main.js',
-		array(),
-		'1.0',
+		'testing_esnext',
+		plugins_url( 'build/hello.js', __FILE__ ),
+		$asset_file['dependencies'],
+		$asset_file['version'],
 		true
 	);
 }
 add_action( 'admin_enqueue_scripts', 'my_plugin_enqueue_scripts' );
+
 
 /**
  * Handle menu entries
