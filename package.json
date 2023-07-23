@@ -1,0 +1,19 @@
+{
+  "name": "testing-esnext",
+  "version": "1.0.0",
+  "description": "..",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "keywords": [
+    "esnext"
+  ],
+  "author": "Ulf Dellbrügge",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "26.9.0"
+  }
+}
